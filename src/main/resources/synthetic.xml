@@ -39,7 +39,7 @@
         <property name="displayStepLogs" category="input" kind="boolean" required="false" default="true"/>
     </type>
 
-    <type type="xldeploy.DeployTask" label="XL Deploy: Deploy extended" extends="xldeploy.TaskRunningTask"
+    <type type="xldeploy.DeployTask" label="XL Deploy: Deploy extended - Deprecated" extends="xldeploy.TaskRunningTask"
           description="Executes a deployment in XL Deploy">
         <property name="scriptLocation" default="xlr_xldeploy/deployTask.py" hidden="true"/>
 
@@ -61,7 +61,7 @@
         <property name="failOnPause" category="input" kind="boolean" required="false" default="true"/>
     </type>
 
-    <type type="xldeploy.UndeployTask" label="XL Deploy: Undeploy extended" extends="xldeploy.TaskRunningTask"
+    <type type="xldeploy.UndeployTask" label="XL Deploy: Undeploy extended - Deprecated" extends="xldeploy.TaskRunningTask"
           description="Executes an undeployment in XL Deploy">
         <property name="scriptLocation" default="xlr_xldeploy/undeployTask.py" hidden="true"/>
 
@@ -84,7 +84,7 @@
 
     </type>
 
-    <type type="xldeploy.ControlTask" label="XL Deploy: Control task extended" extends="xldeploy.TaskRunningTask"
+    <type type="xldeploy.ControlTask" label="XL Deploy: Control task extended - Deprecated" extends="xldeploy.TaskRunningTask"
           description="Invokes a control task on an XL Deploy Configuration Item">
         <property name="scriptLocation" default="xlr_xldeploy/controlTask.py" hidden="true"/>
 
@@ -94,7 +94,7 @@
                   description="A dictionary with key value pairs"/>
     </type>
 
-    <type type="xldeploy.MigrateTask" label="XL Deploy: Migrate package" extends="xldeploy.Task"
+    <type type="xldeploy.MigrateTask" label="XL Deploy: Migrate package - Deprecated" extends="xldeploy.Task"
           description="Migrates a package from one XL Deploy server to another XL Deploy server">
         <property name="scriptLocation" default="xlr_xldeploy/migrateTask.py" hidden="true"/>
         <property name="destinationXLDeployServer" category="input" label="Destination server"
@@ -109,7 +109,7 @@
                   description="If marked true and a package with the same ID already exists on the destination server, this will overwrite it. If false, it will throw an error."/>
     </type>
 
-    <type type="xldeploy.ImportTask" label="XL Deploy: Import package" extends="xldeploy.Task"
+    <type type="xldeploy.ImportTask" label="XL Deploy: Import package - Deprecated" extends="xldeploy.Task"
           description="Imports a package from a remote URL">
         <property name="scriptLocation" default="xlr_xldeploy/importTask.py" hidden="true"/>
         <property name="repositoryUrl" category="input" label="Repository URL" required="true"/>
@@ -118,7 +118,7 @@
                   required="false"/>
     </type>
 
-    <type type="xldeploy.GetLatestVersionTask" label="XL Deploy: Get latest version" extends="xldeploy.Task"
+    <type type="xldeploy.GetLatestVersionTask" label="XL Deploy: Get latest version - Deprecated" extends="xldeploy.Task"
           description="Finds the latest Deployment Package version for an Application in XL Deploy">
         <property name="scriptLocation" default="xlr_xldeploy/getLatestVersionTask.py" hidden="true"/>
         <property name="applicationId" category="input" label="Application ID" required="true"/>
@@ -129,7 +129,7 @@
         <property name="packageId" category="output" label="Package ID"/>
     </type>
 
-    <type type="xldeploy.GetAllVersionsTask" label="XL Deploy: Get all versions" extends="xldeploy.Task"
+    <type type="xldeploy.GetAllVersionsTask" label="XL Deploy: Get all versions - Deprecated" extends="xldeploy.Task"
           description="Finds all Deployment Package versions for an Application in XL Deploy">
         <property name="scriptLocation" default="xlr_xldeploy/getAllVersionsTask.py" hidden="true"/>
         <property name="applicationId" category="input" label="Application ID" required="true"/>
@@ -140,7 +140,7 @@
         <property name="packageIds" category="output" kind="list_of_string" label="Package IDs"/>
     </type>
     
-    <type type="xldeploy.GetCITask" extends="xldeploy.Task" label="XL Deploy: Get CI" description="Gets a CI XML from XL Deploy">
+    <type type="xldeploy.GetCITask" extends="xldeploy.Task" label="XL Deploy: Get CI - Deprecated" description="Gets a CI XML from XL Deploy">
         <property name="scriptLocation" default="xlr_xldeploy/getCITask.py" hidden="true" />
         <property name="ciID" category="input" label="CI ID" required="true"/>
         <property name="accept" category="input" kind="enum" label="Format" required="true" default="xml" description="What format the CI will return in, XML or JSON">
@@ -154,7 +154,7 @@
         <property name="response" category="output" label="CI" />
     </type>
     
-    <type type="xldeploy.GetLastVersionDeployedTask" label="XL Deploy: Get last deployed version"
+    <type type="xldeploy.GetLastVersionDeployedTask" label="XL Deploy: Get last deployed version - Deprecated"
           extends="xldeploy.Task"
           description="Finds the latest version of the Package deployed in XL Deploy">
         <property name="scriptLocation" default="xlr_xldeploy/getLatestDeployedTask.py" hidden="true"/>
@@ -164,7 +164,7 @@
         <property name="applicationId" category="output" label="Application ID"/>
     </type>
 
-    <type type="xldeploy.DoesCIExist" extends="xldeploy.Task" label="XL Deploy: Does CI exist"
+    <type type="xldeploy.DoesCIExist" extends="xldeploy.Task" label="XL Deploy: Does CI exist - Deprecated"
           description="Checks if a CI exists">
         <property name="scriptLocation" default="xlr_xldeploy/doesCIExistTask.py" hidden="true"/>
 
@@ -176,7 +176,7 @@
                   description="If True, the CI exists in XLD"/>
     </type>
 
-    <type type="xldeploy.CreateFolderTree" extends="xldeploy.Task" label="XL Deploy: Create Folder (Tree)"
+    <type type="xldeploy.CreateFolderTree" extends="xldeploy.Task" label="XL Deploy: Create Folder (Tree) - Deprecated"
           description="Creates a Folder or Folder Tree (if required)">
         <property name="scriptLocation" default="xlr_xldeploy/createFolder.py" hidden="true"/>
         <property name="folderID" category="input" label="Folder ID" required="true"/>
@@ -190,7 +190,7 @@
         </property>
     </type>
 
-    <type type="xldeploy.CreateCI" extends="xldeploy.Task" label="XL Deploy: Create CI"
+    <type type="xldeploy.CreateCI" extends="xldeploy.Task" label="XL Deploy: Create CI - Deprecated"
           description="Creates a CI and optionally adds it to an environment">
         <property name="scriptLocation" default="xlr_xldeploy/createCITask.py" hidden="true"/>
 
@@ -205,7 +205,7 @@
                   description="Environment to add the CI to."/>
     </type>
 
-    <type type="xldeploy.DeleteCI" extends="xldeploy.Task" label="XL Deploy: Delete CI"
+    <type type="xldeploy.DeleteCI" extends="xldeploy.Task" label="XL Deploy: Delete CI - Deprecated"
           description="Deletes a CI after optionally removing it from an environment">
         <property name="scriptLocation" default="xlr_xldeploy/deleteCITask.py" hidden="true"/>
         <property name="ciID" category="input" label="CI ID" required="true"/>
@@ -215,14 +215,14 @@
                   default="false"/>
     </type>
 
-    <type type="xldeploy.DeleteInfrastructure" extends="xldeploy.Task" label="XL Deploy: Delete Infrastructure"
+    <type type="xldeploy.DeleteInfrastructure" extends="xldeploy.Task" label="XL Deploy: Delete Infrastructure - Deprecated"
           description="Deletes specified Infrastructure removing all dependencies on it beforehand.">
         <property name="scriptLocation" default="xlr_xldeploy/deleteInfrastructureTask.py" hidden="true"/>
         <property name="ci_id" category="input" label="Infrastructure ID" required="true"/>
     </type>
 
 
-    <type type="xldeploy.UpdateCIProperty" extends="xldeploy.Task" label="XL Deploy: Update CI property"
+    <type type="xldeploy.UpdateCIProperty" extends="xldeploy.Task" label="XL Deploy: Update CI property - Deprecated"
           description="Update a property from a CI">
         <property name="scriptLocation" default="xlr_xldeploy/updateCIProperty.py" hidden="true"/>
         <property name="ciID" category="input" label="CI ID" required="true"
@@ -233,7 +233,7 @@
                   description="Value of the property to update"/>
     </type>
 
-    <type type="xldeploy.CliConfig" label="XL Deploy CLI config" extends="xlrelease.Configuration">
+    <type type="xldeploy.CliConfig" label="XL Deploy CLI config - Deprecated" extends="xlrelease.Configuration">
         <property name="cliHome" category="input"/>
         <property name="cliExecutable" category="input" default="cli" hidden="true"/>
         <property name="xldHost" category="input" default="DEFAULT"/>
@@ -253,19 +253,19 @@
         <property name="err" required="false" category="output" description="Error stream of the process."/>
     </type>
 
-    <type type="xldeploy.cli" label="XL Deploy CLI: Run script" extends="xldeploy.cliTask">
+    <type type="xldeploy.cli" label="XL Deploy CLI: Run script - Deprecated" extends="xldeploy.cliTask">
         <property name="scriptLocation" default="xlr_xldeploy/cli.py" hidden="true"/>
         <property name="script" category="input" size="large"/>
         <property name="options" category="input" default=""/>
     </type>
 
-    <type type="xldeploy.cliFile" label="XL Deploy CLI: Run script from file" extends="xldeploy.cliTask">
+    <type type="xldeploy.cliFile" label="XL Deploy CLI: Run script from file - Deprecated" extends="xldeploy.cliTask">
         <property name="scriptLocation" default="xlr_xldeploy/cliFile.py" hidden="true"/>
         <property name="script" category="input"/>
         <property name="options" category="input" default=""/>
     </type>
 
-    <type type="xldeploy.cliUrl" label="XL Deploy CLI: Run script from url" extends="xldeploy.cliTask">
+    <type type="xldeploy.cliUrl" label="XL Deploy CLI: Run script from url - Deprecated" extends="xldeploy.cliTask">
         <property name="scriptLocation" default="xlr_xldeploy/cliUrl.py" hidden="true"/>
         <property name="scriptUrl" category="input"/>
         <property name="urlUserName" category="input"/>
@@ -273,20 +273,20 @@
         <property name="options" category="input" default=""/>
     </type>
 
-    <type type="xldeploy.GetCITags" extends="xldeploy.Task" label="XL Deploy: Get CI Tags" >
+    <type type="xldeploy.GetCITags" extends="xldeploy.Task" label="XL Deploy: Get CI Tags - Deprecated" >
         <property name="scriptLocation"   default="xlr_xldeploy/GetCITags.py" hidden="true" />
         <property name="xldCI"            category="input" description="The CI to the the tags from" />
         <property name="xldTags"          category="output" kind="list_of_string" />
     </type>
 
-    <type type="xldeploy.AddCITag" extends="xldeploy.Task" label="XL Deploy: Add CI Tag">
+    <type type="xldeploy.AddCITag" extends="xldeploy.Task" label="XL Deploy: Add CI Tag - Deprecated">
         <property name="scriptLocation"   default="xlr_xldeploy/AddCITag.py" hidden="true" />
         <property name="xldCI"            category="input" description="The CI to the the tags from" />
         <property name="xldNewTag"        category="input" description="A New tag to add to the CI" />
         <property name="xldTags"          category="output" kind="list_of_string" />
     </type>
 
-    <type type="xldeploy.SetCITags" extends="xldeploy.Task" label="XL Deploy: Set CI Tags">
+    <type type="xldeploy.SetCITags" extends="xldeploy.Task" label="XL Deploy: Set CI Tags - Deprecated">
         <property name="scriptLocation"   default="xlr_xldeploy/SetCITags.py" hidden="true" />
         <property name="xldCI"            category="input" description="The CI to the the tags from" />
         <property name="xldNewTags"       category="input" description="A New tag to add to the CI" kind="list_of_string" />
