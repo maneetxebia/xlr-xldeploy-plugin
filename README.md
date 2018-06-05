@@ -46,7 +46,7 @@ permission java.io.FilePermission "conf/logback.xml", "read";
 
 ## Types ##
 
-+ ControlTask (compatible with XL Deploy 4.5.2 and up)
++ ControlTask - Deprecated (compatible with XL Deploy 4.5.2 and up)
   * `ciId`
   * `controlTaskName`
   * `parameters`
@@ -55,7 +55,7 @@ permission java.io.FilePermission "conf/logback.xml", "read";
   * `pollingInterval`
   * `numberOfPollingTrials`
 
-+ DeployTask (compatible with XL Deploy 4.5.1 and up)
++ DeployTask - Deprecated (compatible with XL Deploy 4.5.1 and up)
   * `deploymentPackage` (ID of the deployment package to deploy e.g.: `Applications/XL Release/XLR/1.0`)
   * `environment` (ID of the environment to deploy to e.g.: `Environments/Xl Release/XL Release`)
   * `orchestrators` (Comma separated list of orchestrators to be used: `parallel-by-deployment-group, parallel-by-container`)
@@ -69,7 +69,7 @@ permission java.io.FilePermission "conf/logback.xml", "read";
   * `numberOfPollingTrials` (Number of times to poll for task status)
   * `failOnPause` (If checked task will fail if the deployment enters a STOPPED state, for example if the xld-pause-plugin is in use. Set to True by default for backwards compatibility)
 
-+ UndeployTask (compatible with XL Deploy 4.5.1 and up)
++ UndeployTask - Deprecated (compatible with XL Deploy 4.5.1 and up)
   * `deployedApplication` - Name of the deployed application you want to undeploy (Only the name, without Environments, etc...)
   * `environment` (ID of the environment to deploy to e.g.: `Environments/Xl Release/XL Release`)
   * `orchestrators` (Comma separated list of orchestrators to be used: `parallel-by-deployment-group, parallel-by-container`)
@@ -81,7 +81,7 @@ permission java.io.FilePermission "conf/logback.xml", "read";
   * `numberOfPollingTrials` (Number of times to poll for task status)
   * `failOnPause` (If checked task will fail if the deployment enters a STOPPED state, for example if the xld-pause-plugin is in use. Set to True by default for backwards compatibility)
 
-+ Migrate Package (compatible with XL Deploy 6.0.0 and up)
++ Migrate Package - Deprecated (compatible with XL Deploy 6.0.0 and up)
   * `server` - Server to pull a package from
   * `username` - Override source username
   * `password` - Override source password
@@ -92,7 +92,7 @@ permission java.io.FilePermission "conf/logback.xml", "read";
   * `autoCreatePath` - If set the task will automatically create the path and application if it doesn't exist in the destination
   * `idempotent` - If True and `deploymentPackage` exists on `destinationServer`, it will be overwritten. If false, it will error.
 
-+ Import Package
++ Import Package - Deprecated
   * `server` - Server to import a package to
   * `username` - Override username
   * `password` - Override password
@@ -100,7 +100,7 @@ permission java.io.FilePermission "conf/logback.xml", "read";
   * `repositoryUsername` - Optional username for the repository
   * `repositoryPassword` - Optional password for the repository
 
-+ Get CI
++ Get CI - Deprecated
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
@@ -109,14 +109,14 @@ permission java.io.FilePermission "conf/logback.xml", "read";
   * `throwOnFail` - Boolean - If True, a False return will Fail the task rather than just returning False.
   * `response` - Return value of the CI described in the format requested
 
-+ Get All Versions
++ Get All Versions - Deprecated
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
   * `applicationId` - ID of the application to query for all package versions
   * `packageId` - Return value with the all package IDs of the application (**NOTE:** this needs to be a variable of the *list* type, and needs to be defined beforehand)
 
-+ Get Latest Version
++ Get Latest Version - Deprecated
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
@@ -124,7 +124,7 @@ permission java.io.FilePermission "conf/logback.xml", "read";
   * `stripApplications` - Whether to strip "Applications/" from the beginning of the returned package ID
   * `packageId` - Return value with the latest package ID
 
-+ Get Last Version Deployed
++ Get Last Version Deployed - Deprecated
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
@@ -133,14 +133,14 @@ permission java.io.FilePermission "conf/logback.xml", "read";
 returned package ID
   * `applicationId` - Return value with the current application ID
 
-+ Does CI exist
++ Does CI exist - Deprecated
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
   * `ciID` - Repo path to CI to check for existence, e.g. `Infrastructure/myHost`
   * `throwOnFail` - Boolean - If True, a False return will Fail the task rather than just returning False.
   
-+ Create CI
++ Create CI - Deprecated
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
@@ -152,14 +152,14 @@ returned package ID
   * `addToEnvironment` - Switch to decide if to add the CI to an environment
   * `envID` - Environment to add the CI to.
 
-+ Create Folder (Tree)
++ Create Folder (Tree) - Deprecated
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
   * `folder_id` - Path of folder structure you wish to create without top level type, e.g. `TeamA/DEV/Application`
   * `folder_type` - Top level type under which the folder should be created e.g. `Applications`
 
-+ Delete CI
++ Delete CI - Deprecated
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
@@ -167,7 +167,7 @@ returned package ID
   * `envID` - If provided, will remove the CI from an Environment first
   * `throwOnFail` - Boolean - If True, the Task will fail if the Deletion does not succeed.
 
-+ Delete Infrastructure - This task will delete the specified Infrastructure CI, AND will also undeploy any deployed applications on the infrastrucutre as well as remove the infrastructure from any environments where it is referenced as a container.
++ Delete Infrastructure - Deprecated: This task will delete the specified Infrastructure CI, AND will also undeploy any deployed applications on the infrastrucutre as well as remove the infrastructure from any environments where it is referenced as a container.
   * `server` - Server to query
   * `username` - Override username
   * `password` - Override password
@@ -199,7 +199,7 @@ returned package ID
 
   ![image](images/Task_Config2.png)
 
-+ Get CI Tags
++ Get CI Tags - Deprecated
   * `Server`: XL Deploy Server CI
   * `Username`
   * `Password`
@@ -210,7 +210,7 @@ returned package ID
 
   ![GetCITags](images/GetCITags.png)
   
-+ Add CI Tag
++ Add CI Tag - Deprecated
   * `Server`: XL Deploy Server CI
   * `Username`
   * `Password`
@@ -222,7 +222,7 @@ returned package ID
  
  ![AddCITag](images/AddCITag.png)
  
-+ Set CI Tags
++ Set CI Tags - Deprecated
   * `Server`: XL Deploy Server CI
   * `Username`
   * `Password`
