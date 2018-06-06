@@ -26,7 +26,7 @@ See the **[XL Release Documentation](https://docs.xebialabs.com/xl-release/index
 
 # Overview #
 
-The xlr-xldeploy-plugin is a XL Release plugin that allows to start a control task, start a deployment, migrate a deployment package to another server or get the latest version of an application on XL Deploy.
+The xlr-xldeploy-plugin is a XL Release plugin that allows to start a control task, start a deployment, migrate a deployment package to another server or get the latest version of an application on XL Deploy. This plugin is now deprecated and [xlr-xld-plugin](https://github.com/xebialabs/xlr-xld-plugin) is the officially supported plugin.
 
 ## Installation ##
 
