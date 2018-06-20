@@ -173,7 +173,7 @@ returned package ID
   * `password` - Override password
   * `ci_id` - Fully qualified id from the Infrastructure CI to delete
 
-+ CLI Config (Global Configuration)
++ CLI Config (Global Configuration) - Deprecated
   * `CLI Home` - Home directory where XL Deploy CLI is installed
   * `XLD Host` - Host the CLI should connect to DEFAULT will work if on the same server as XL Deploy
   * `XLD Port` - Port for XL Deploy server.  DEFAULT will work if using the default XL Deploy port
@@ -187,13 +187,13 @@ returned package ID
 
   ![image](images/XLD_CLI_Config.png)
 
-+ CLI
++ CLI - Deprecated
   * `script` - CLI Script to execute
 
 
   ![image](images/Task_Config.png)
 
-+ CLI URL
++ CLI URL - Deprecated
   * `scriptURL` - URL to CLI Script to execute
 
 
